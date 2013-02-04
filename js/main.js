@@ -18,13 +18,16 @@ var app = {
         if (navigator.notification) {
             navigator.notification.alert(message, null, title, 'OK');
         } else {
-            alert(title ? (title + ": " + message) : message);
+            alert(title ? (title + " 8888:8888 " + message) : message);
         }
     },
 
     initialize: function() {
 
-        this.store = new MemoryStore();
+        var self = this;
+        this.store = new MemoryStore(function() {
+            self.showAlert('Store Initialized', 'Info');
+        });
         $('.search-key').on('keyup', $.proxy(this.findByName, this));
 
     }
