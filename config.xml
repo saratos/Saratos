@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.saratos.brainsnacks"
+        versionCode = "1"
+        version     = "0.0.1">
+ 
+    <name>Brain Snacks</name>
+ 
+    <description>
+        Mobile E-Learning
+    </description>
+ 
+    <author href="http://www.saratos.com" email="David.Broderick@saratos.com">
+        David Broderick
+    </author>
+ 
+    
+ 
+</widget>
