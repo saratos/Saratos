@@ -25,31 +25,31 @@
 			<li><a href="#">BMW</a></li>
 			<li><a href="#">Cadillac</a></li>
 			<li><a href="#">Ferrari</a></li>
-		</ul>
+		
 
 		
 		
 		<!-- Davids test code to get stuff from the server -->
 		<SCRIPT>
 		
-		jQuery.getJSON("http://www.saratos.com/eapp/list.php&format=json",function(data) {
+		jQuery.getJSON("http://www.saratos.com/eapp/list.php",function(data) {
 		
 			console.log(data);
   var items = [];
  
   $.each(data, function(key, val) {
-    items.push('<li id="' + key + '">' + val + '</li>');
+    items.push('<li><a href=\"#\">' + val + '</A></li>');
   });
  
-  $('<ul/>', {
-    'class': 'my-new-list',
-    html: items.join('')
-  }).appendTo('body');
+	document.write(items);
+	
 });
         
 		
 		</SCRIPT>
 		<!-- End of Davids test code to get stuff from the server -->
+		
+		</UL>
 		<form>
    <label for="slider-0">Input slider:</label>
    <input type="range" name="slider" id="slider-0" value="25" min="0" max="100"  />
