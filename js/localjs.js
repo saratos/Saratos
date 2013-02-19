@@ -1,5 +1,7 @@
 // localjs.js
 
+var locationInfo = new Object;
+
 var d = new Date();
 
 var hours = d.getHours();
@@ -73,6 +75,16 @@ $.getJSON("http://www.saratos.com/eapp/jlist.php" + "?jsoncallback=?",function(r
 //   the current GPS coordinates
 //
 var onSuccess = function(position) {
+
+	locationInfo.latitude = position.coords.latitude;
+	locationInfo.longitude = position.coords.longitude;
+	locationInfo.altitude = position.coords.altitude;
+	locationInfo.accuracy = position.coords.accuracy;
+	locationInfo.altitudeAccuracy = position.coords.altitudeAccuracy;
+	locationInfo.heading = position.coords.heading;
+	locationInfo.speed = position.coords.speed;
+	locationInfo.timestamp = position.timestamp;
+	
     alert('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
           'Altitude: '          + position.coords.altitude          + '\n' +
@@ -91,6 +103,9 @@ function onError(error) {
 }
 
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
+ 
+ document.getElementById("pthreelocation").innerHTML = "<H1>Geo Location</H1>" +
+ "<B>Latitude</B>" + locationInfo.latitude + " // " + <B>Longitude</B> + locationInfo.longitude;
  
 /*
 	End of File
