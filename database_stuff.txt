@@ -1,0 +1,23 @@
+database stuff
+
+database = saratos;
+saratosapp
+Ora1thE0
+
+create table rusers (
+	ruserid int not null auto_increment primary key,
+	firstname varchar(60),
+	lastname varchar(60),
+	emailaddress varchar(100) );
+	
+insert into rusers (firstname,lastname,emailaddress) values ('David','Broderick','David.Broderick@gmail.com');
+insert into rusers (firstname,lastname,emailaddress) values ('Jullett','Broderick','Jullett.Broderick@gmail.com');
+
+create table courses (
+	courseid	int	not null auto_increment primary key,
+	coursecode	varchar(10),
+	coursename	varchar(254),
+	courseoverview	varchar(254),
+	coursejumppoint	varchar(254) );
+
+insert into courses (coursecode,coursename,courseoverview,coursejumppoint) values ('A1','Introduction to English','Learn English the fun way, quickly on your mobile','http://www.saratos.com/courses/a1/');
